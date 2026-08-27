@@ -58,39 +58,19 @@ export function getProductCardEl(img, name, oldPrice, newPrice, id) {
     return productCardEl
 }
 
-// export function renderProductList(data) {
-//     const productList = document.querySelector('.catalog__list');
-//     productList.innerHTML = '';
-
-//         for (let i = 0; i < data.length; i++) {
-//             productList.append(getProductCardEl(data[i].image, data[i].name, data[i].price.old, data[i].price.new, data[i].id))
-//         }
-
-
-//   }
-    
-// ИЗМЕНЕНО: добавлены параметры currentPage и itemsPerPage
 export function renderProductList(data, currentPage = 1, itemsPerPage = 6) {
     const productList = document.querySelector('.catalog__list');
     productList.innerHTML = '';
-
-    // НОВОЕ: вычисление индексов для пагинации
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    
-    // НОВОЕ: получение товаров только для текущей страницы
     const productsToRender = data.slice(startIndex, endIndex);
 
-    // ИЗМЕНЕНО: используем productsToRender вместо data
     for (let i = 0; i < productsToRender.length; i++) {
         productList.append(getProductCardEl(productsToRender[i].image, productsToRender[i].name, productsToRender[i].price.old, productsToRender[i].price.new, productsToRender[i].id))
     }
 
-    // НОВОЕ: вызов функции обновления пагинации
     updatePagination(data.length, currentPage, itemsPerPage);
 }
-
-// НОВОЕ: функция для создания кнопок пагинации
 function updatePagination(totalItems, currentPage, itemsPerPage) {
     const totalPages = Math.ceil(totalItems / itemsPerPage);
     const paginationContainer = document.querySelector('.catalog__pagination');

@@ -31,27 +31,27 @@ export function getProductCardEl(img, name, oldPrice, newPrice, id) {
                   <span class="product-card__price-number">${newPrice}</span>
                   <span class="product-card__price-add">₽</span>
                 </span>
-                  <div class="product-card__tooltip tooltip">
-                    <button class="tooltip__btn" aria-label="Показать подсказку">
-                      <svg class="tooltip__icon" width="5" height="10" aria-hidden="true">
-                        <use xlink:href="images/sprite.svg#icon-i"></use>
-                      </svg>
-                    </button>
-                    <div class="tooltip__content">
-                      <span class="tooltip__text">Наличие товара по городам:</span>
-                      <ul class="tooltip__list">
-                        <li class="tooltip__item">
-                          <span class="tooltip__text">Москва: <span class="tooltip__count">454</span></span>
-                        </li>
-                        <li class="tooltip__item">
-                          <span class="tooltip__text">Оренбург: <span class="tooltip__count">381</span></span>
-                        </li>
-                        <li class="tooltip__item">
-                          <span class="tooltip__text">Санкт-Петербург: <span class="tooltip__count">15</span></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  // <div class="product-card__tooltip tooltip">
+                  //   <button class="tooltip__btn" aria-label="Показать подсказку">
+                  //     <svg class="tooltip__icon" width="5" height="10" aria-hidden="true">
+                  //       <use xlink:href="images/sprite.svg#icon-i"></use>
+                  //     </svg>
+                  //   </button>
+                  //   <div class="tooltip__content">
+                  //     <span class="tooltip__text">Наличие товара по городам:</span>
+                  //     <ul class="tooltip__list">
+                  //       <li class="tooltip__item">
+                  //         <span class="tooltip__text">Москва: <span class="tooltip__count">454</span></span>
+                  //       </li>
+                  //       <li class="tooltip__item">
+                  //         <span class="tooltip__text">Оренбург: <span class="tooltip__count">381</span></span>
+                  //       </li>
+                  //       <li class="tooltip__item">
+                  //         <span class="tooltip__text">Санкт-Петербург: <span class="tooltip__count">15</span></span>
+                  //       </li>
+                  //     </ul>
+                  //   </div>
+                  // </div>
                 </div>
               </div>
   `
